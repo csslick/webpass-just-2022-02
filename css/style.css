@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #222328;
+  font-size: 18px;
+  font-family: "맑은 고딕", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  /* background: #ccc; */
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header > h1 {
+  position: absolute;
+  left: 0px;
+  top: 33px;
+}
+
+header > nav {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+
+nav .depth1 {
+  display: flex;
+}
+
+nav .depth1 > li {
+  /* outline: 1px solid #333; */
+  width: 120px;
+  text-align: center;
+}
+
+nav .depth1 > li > a {
+  color: #222328;
+  font-weight: bold;
+}
+
+/* 2depth */
+nav .depth2 > li > a {
+  color: #222328;
+  font-size: 16px;
+}
+
+nav .depth2.on {
+  background: #ccc;
+  height: 140px;
+  opacity: 1;
+}
+
+nav .depth2 {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+/* hover 메뉴 하이라이트 및 모션 효과 */
+nav .depth1 > li > a {
+  transition: 0.5s;
+}
+
+nav .depth1 > li > a:hover {
+  /* background: #ccc; */
+  color: tomato;
+}
+
+nav .depth2 {
+  margin-top: 1em;
+}
+
+nav .depth2 > li > a {
+  padding: 5px;
+  display: block;
+}
+nav .depth2 > li > a:hover{
+  background: #333;
+  color: #fff;
+}
+
+/* 메인 비주얼 */
+#main-visual {
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto;
+  /* outline: 3px solid red; */
+  position: relative;
+  overflow: hidden;
+}
+
+.sliders > img {
+  display: block;
+}
+
+.sliders {
+  /*  
+    1번 이미지: 0
+    2번 이미지: -300
+    3번 이미지: -600
+  */
+  position: absolute;
+  top: 0px;
+  transition: 1s;
+}
+
+
+/* C 영역 */
+#main-contents {
+  width: 1200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+#main-contents > .col {
+  flex: 1;
+  padding: 10px;
+}
+
+#main-contents > .col img {
+  width: 100%;
+}
+
+#gallery {
+  display: flex;
+  justify-content: space-between;
+}
+
+#gallery > li {
+  outline: 1px solid red;
+  height: 120px;
+  width: 125px;
+}
+
+#gallery img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
