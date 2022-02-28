@@ -37,6 +37,7 @@ header > nav {
   position: absolute;
   right: 20px;
   top: 40px;
+  z-index: 999;
 }
 
 nav .depth1 {
@@ -135,6 +136,14 @@ nav .depth2 > li > a:hover{
   padding: 10px;
 }
 
+#main-contents > .col:first-child {
+  padding-left: 0;
+}
+
+#main-contents > .col:last-child {
+  padding-right: 0;
+}
+
 #main-contents > .col img {
   width: 100%;
 }
@@ -145,13 +154,62 @@ nav .depth2 > li > a:hover{
 }
 
 #gallery > li {
-  outline: 1px solid red;
-  height: 120px;
-  width: 125px;
+  /* outline: 1px solid red; */
+  height: 108px;
+  width: 105px;
 }
 
 #gallery img {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+/* 탭 콘텐츠 */
+#notice.on {
+  display: block;
+}
+
+#notice {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+#notice li {
+  margin-bottom: 3px;
+}
+
+#notice li > a {
+  color: #222328;
+}
+
+#gallery.on {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+#gallery {
+  display: none;
+}
+
+.tab-group {
+  width: 200px;
+  background: #ccc;
+  display: flex;
+}
+
+.tab-group > a {
+  display: block;
+  padding: 10px;
+  border: 1px solid #999;
+  border-bottom-style: none;
+  flex: 1;
+  text-align: center;
+  color: #222328;
+}
+
+.tab-group > a.on {
+  background: #fff;
 }
