@@ -129,33 +129,55 @@ nav .depth2 > li > a:hover{
   height: 200px;
   margin: 0 auto;
   display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #main-contents > .col {
   flex: 1;
-  padding: 10px;
+  /* padding: 10px; */
+  padding: 0;
 }
 
 #main-contents > .col:first-child {
+  display: flex;
+  flex-flow: column;
   padding-left: 0;
+  padding-bottom: 0;
 }
 
 #main-contents > .col:last-child {
   padding-right: 0;
 }
 
+#main-contents > .col:nth-child(2) {
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#main-contents > .col:nth-child(3) {
+  padding: 10px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+
 #main-contents > .col img {
   width: 100%;
+  height: 100%;
 }
 
 #gallery {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 #gallery > li {
   /* outline: 1px solid red; */
-  height: 108px;
+  /* height: 108px; */
   width: 105px;
 }
 
@@ -174,10 +196,11 @@ nav .depth2 > li > a:hover{
   display: none;
   border: 1px solid #ccc;
   padding: 1em;
+  height: 100%;
 }
 
 #notice li {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 #notice li > a {
@@ -212,4 +235,54 @@ nav .depth2 > li > a:hover{
 
 .tab-group > a.on {
   background: #fff;
+}
+
+
+/* 팝업창 */
+.modal.on {
+  display: block;
+}
+
+.modal {
+  width: 500px;
+  height: 400px;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: fixed;
+  left: calc(50% - 250px);
+  top: calc(50% - 200px);
+  z-index: 1000;
+  padding: 1em;
+  display: none;
+}
+
+#close-btn {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  padding: 5px;
+}
+
+/* footer */
+footer {
+  width: 1200px;
+  height: 100px;
+  background: #eee;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-logo {
+  position: absolute;
+  left: 0px;
+  top: 30px;
+}
+
+footer .sns {
+  position: absolute;
+  right: 20px;
+  top: 35px;
 }

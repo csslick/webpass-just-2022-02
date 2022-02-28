@@ -22,4 +22,32 @@ $(function(){
     $('.sliders').css('top', num * height);  
   }, 3000);
 
+  // tab 버튼
+  $('.tab-group > a:first').click(function(){
+    // 버튼 선택 효과
+    $('.tab-group > a').removeClass('on');
+    $(this).addClass('on');
+    // notice 보여주기
+    $('#gallery').removeClass('on')
+    $('#notice').addClass('on');
+  })
+
+  $('.tab-group > a:last').click(function(){
+    $('.tab-group > a').removeClass('on');
+    $(this).addClass('on');
+    // gallery 보여주기
+    $('#notice').removeClass('on');
+    $('#gallery').addClass('on');
+  })
+
+  // 모달창(레이어 팝업창) 열기
+  $('#notice > li:first').click(function(){
+    $('.modal').addClass('on');
+  });
+
+  // 모달창 닫기 - #close-btn 클릭시
+  $('#close-btn').click(function(){
+    $('.modal').removeClass('on');
+  })
+
 })
