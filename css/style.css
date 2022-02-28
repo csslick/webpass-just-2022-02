@@ -135,19 +135,17 @@ nav .depth2 > li > a:hover{
 
 #main-contents > .col {
   flex: 1;
-  /* padding: 10px; */
   padding: 0;
 }
 
 #main-contents > .col:first-child {
   display: flex;
   flex-flow: column;
-  padding-left: 0;
-  padding-bottom: 0;
+  padding-right: 10px;
 }
 
 #main-contents > .col:last-child {
-  padding-right: 0;
+  /* padding-right: 0; */
 }
 
 #main-contents > .col:nth-child(2) {
@@ -233,6 +231,11 @@ nav .depth2 > li > a:hover{
   color: #222328;
 }
 
+.tab-group > a:first-child {
+  border-right-style: none;
+}
+
+
 .tab-group > a.on {
   background: #fff;
 }
@@ -285,4 +288,8 @@ footer .sns {
   position: absolute;
   right: 20px;
   top: 35px;
+}
+
+footer .sns a {
+  margin-left: 10px;
 }
